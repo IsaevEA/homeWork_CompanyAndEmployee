@@ -46,8 +46,10 @@ public class Bank extends AbstractCompany implements Validationable{
     public boolean validationEmployee(Employee employee) {
         double ratio = employee.getProposedSalary() *100 / proposedSalary;
         if (ratio >= 90 && ratio <= 105){
+            System.out.println("Подходит");
            return true;
         }
+        System.out.println("Не подходит");
         return false;
     }
 }
